@@ -1,0 +1,8 @@
+body{
+    background: linear-gradient(skyblue, lightgreen);
+    /* background-image: url(images/FPTU.jpg); */
+    background-repeat: no-repeat;
+    background-attachment: fixed ;
+    background-position: center;
+    background-size: cover;
+}
