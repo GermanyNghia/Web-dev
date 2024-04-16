@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Lay thoi gian hien tai
+current_time=$(date +"%H:%M:%S %d-%m-%Y")
+
+# Luu tru log file
+log_file="/var/log/checketc.log"
+
+# Lưu trữ danh sách file trong /etc
+previous_files=$(ls -1 /etc)
+
+# Ghi log
+echo "Log checketc - [$current_time]" >> "$log_file"
+
+# 1. Kiểm tra file mới
+new_files=$(ls -1 /etc | grep -v "$previous_files")
+if [ -n "$new_files" ]; then
+  echo "**File mới:**" >> "$log_file"
+  for file in $new_files; do
+      echo " - $file" >> "$log_file"
+      if [ -f /etc/$file ] && file -i /etc/$file | grep -q "text"; then
+        echo "   ---- 10 dòng đầu tiên ----" >> "$log_file"
+        head -10 /etc/$file >> "$log_file"
+      fi
+    done
+  fi
+
+  # 2. Kiểm tra file thay đổi
+  changed_files=$(find /etc -cmin -30)
+  if [ -n "$changed_files" ]; then
+    echo "**File thay đổi:**" >> "$log_file"
+    for file in $changed_files; do
+      echo " - $file" >> "$log_file"
+    done
+  fi
+
+  # 3. Kiểm tra file bị xóa
+  deleted_files=$(comm -23 <(echo "$previous_files") <(ls -1 /etc))
+  if [ -n "$deleted_files" ]; then
+    echo "**File bị xóa:**" >> "$log_file"
+    for file in $deleted_files; do
+      echo " - $file" >> "$log_file"
+    done
+  fi
+
+  # Cập nhật danh sách file
+  previous_files=$(ls -1 /etc)
+
+  # Ghi log
+  echo "**[$current_time]** Kết thúc kiểm tra." >> "$log_file"
+
+  # Gửi email
+  mail -s "Báo cáo kiểm tra thư mục /etc" root@localhost < "$log_file"
