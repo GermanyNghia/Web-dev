@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>
+    <a href="../home.php">Home</a>
+  </button>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card">
+          <h2 class="card-title text-center">Add New Student <a href="stylesheet.css"></a></h2>
+          <link rel="stylesheet" href="stylesheet.css">
+          <div class="card-body py-md-4">
+            <form action="addStudent.php" method="POST">
+
+              <div class="form-group">
+                <input type="text" class="form-control" name="username" id="username" placeholder="username">
+              </div>
+
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" id="password" placeholder="password">
+              </div>
+
+              <div class="form-group">
+                <input type="password" class="form-control" name="repassword" id="repassword" placeholder="repassword">
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" name="student_name" id="student_name" placeholder="student_name">
+              </div>
+
+              <div class="form-group">
+                <input type="email" class="form-control" name="student_email" id="student_email" placeholder="student_email">
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" name="student_class" id="student_class" placeholder="student_class">
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" name="student_ID" id="student_ID" placeholder="student_ID">
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" name="phone_num" id="phone_num" placeholder="Phone Number">
+              </div>
+              <div class="form-group">
+                <input type="file" class="form-control" name="avatar" id="avatar" accept="image/*">
+              </div>
+              <div class="d-flex flex-row align-items-center justify-content-between">
+                <input type="submit" class="btn btn-primary" name="addStudent" value="Add Student">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
