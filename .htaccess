@@ -1,0 +1,18 @@
+Options +MultiViews
+Options -Indexes
+
+
+## Remove Extenstion
+RewriteEngine On
+RewriteBase /folder_name/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)\.php$ $1 [NC,L,R=301]
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+## Auto Remove Extenstion
+#RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+#RewriteRule ^ /%1 [R=301,NE,L]
+
+
+ErrorDocument 404 /Website/Error/404-Not-Found.html
+ErrorDocument 403 /Website/Error/403-Forbiden.html
