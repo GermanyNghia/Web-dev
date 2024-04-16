@@ -1,0 +1,107 @@
+body{
+    background: linear-gradient(skyblue, lightgreen);
+    /* background-image: url(images/FPTU.jpg); */
+    background-repeat: no-repeat;
+    background-attachment: fixed ;
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    color: red;
+    font-family: "consolas", sans-serif;
+    /* text-shadow: 0 0 3px #FF0000, 0 -5px 5px #0000FF; */
+    text-shadow: 0px 0px 3px green, 0px -5p 5px black ; 
+
+}
+#box1{
+
+    border: 1px solid;
+    height: 300px;
+    width: 300px;
+    background-color: lightblue;
+
+    position: relative;
+    margin-top: 200px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#box2{
+    border: 1px solid;
+    height: 250px;
+    width: 250px;
+    background-color: lightcoral;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+
+}
+#view_student{
+    background-color: lightcoral;
+    width: 200px;
+    height: 50px;
+    font-size: medium;
+}
+#view_student:hover{
+
+    background-color: grey;
+}
+#view_student:active{
+    background-color: lightblue;
+}
+#view_teacher{
+    background-color: lightcoral;
+    width: 200px;
+    height: 50px;
+    font-size: medium;
+}
+#view_teacher:hover{
+
+    background-color: grey;
+}
+#view_teacher:active{
+    background-color: lightblue;
+}
+#add_teacher{
+    background-color: lightcoral;
+    width: 200px;
+    height: 50px;
+    font-size: medium;
+}
+#add_teacher:hover{
+
+    background-color: grey;
+}
+#add_teacher:active{
+    background-color: lightblue;
+}
+#view-profile{
+    background-color: lightcoral;
+    width: 200px;
+    height: 50px;
+    font-size: medium;
+}
+#view-profile:hover{
+
+    background-color: grey;
+}
+#view-profile:active{
+    background-color: lightblue;
+}
+#log_out{
+    background-color: lightcoral;
+    width: 200px;
+    height: 50px;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+}
+#log_out:hover{
+
+    background-color: red;
+}
+#log_out:active{
+    background-color: blue;
+}
+
