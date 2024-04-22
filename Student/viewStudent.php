@@ -52,8 +52,13 @@ while ($user = mysqli_fetch_assoc($result)) {
     echo "<td>".$user['student_class']."</td>";
     echo "<td>".$user['student_ID']."</td>";
     echo "<td>".$user['phone_num']."</td>";
-    echo "<td>".$user['avatar']."</td>";
-    echo "<td><img src=/../../Student_Teacher/{$user['avatar']}</td>";
+    if (empty($user['avatar']) ){
+        echo "<td>"."no avatar"."<a href=../Student_Teacher/uploadAvatar?username={$user['username']}>Upate avatar</a>"."</td>";
+       
+    }else{
+        echo "<td><img src='http://localhost/website/Student_Teacher/{$user['avatar']}' style='width:100px;height:100px;>'</td>";
+    }
+    
 }
     ?>
 </body>
