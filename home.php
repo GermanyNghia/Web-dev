@@ -1,10 +1,7 @@
 <?php
 // include("solarSystem.html");
 session_start();
-// include("Check/authentication.php");
-// $_COOKIE["users"] = "teachers";
-$_COOKIE["users"] = "students";
-// $_SESSION[$_COOKIE["users"]] = "";
+
 function check_cookie()
 {
 
