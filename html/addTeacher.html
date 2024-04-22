@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/register.css">
+</head>
+
+<body>
+    <h1>Đăng Ký</h1>
+
+    <form action="addTeacher.php" method="post" id="page">
+
+        <div>
+            <label>New username:</label> <br>
+            <input type="text" name="username" id="username"> <br>
+        </div>
+
+        <div>
+            <label>New password:</label> <br>
+            <input type="password" name="password" id="password"> <br>
+            <label>Re entering password:</label> <br>
+            <input type="password" name="repassword" id="cpassword"> <br>
+        </div>
+
+        <div>
+            <label>New teacher's name:</label> <br>
+            <input type="text" name="teacher_name"> <br>
+        </div>
+
+        <div>
+            <label>New teacher's email:</label> <br>
+            <input type="email" name="teacher_email" id="email"> <br>
+        </div>
+
+        <div>
+            <label>New teacher's class:</label> <br>
+            <input type="text" name="teacher_class"> <br>
+        </div>
+
+        <div>
+            <label>New teacher's ID:</label> <br>
+            <input type="text" name="teacher_ID"> <br>
+        </div>
+
+        <div>
+            <label>New teacher's phonenumber:</label> <br>
+            <input type="text" name="phone_num" id="phone"> <br>
+        </div>
+
+        <div>
+            <label>DoB:</label> <br>
+            <input type="date" name="DoB"> <br>
+        </div>
+
+        <div>
+            <label>Gender: </label>
+            <input type="radio" name="gender" value="Male">
+            Male
+            <input type="radio" name="gender" value="Female">
+            Female
+            <input type="radio" name="gender" value="Other">
+            Other
+            <br>
+        </div>
+
+        <div>
+            <input type="submit" name="register" value="Register">
+        </div>
+
+    </form>
+</body>
+
+</html>
