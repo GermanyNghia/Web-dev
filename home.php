@@ -19,9 +19,6 @@ try {
 
     if (!isset($_SESSION[$_COOKIE["users"]])) {
         end_Section();
-        // $_COOKIE["users"] = "";
-        // $_SESSION[$_COOKIE["users"]] = "";
-        // $_SESSION[$_COOKIE["users"]] = "admin";
     } else {
         if ($_SESSION[$_COOKIE["users"]] == $_SESSION[$_COOKIE["users"]]) {
             if (check_cookie()) {
