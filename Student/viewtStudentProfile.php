@@ -53,7 +53,7 @@ $result = mysqli_stmt_get_result($stmt);
             echo "<td>" . $user['student_class'] . "</td>";
             echo "<td>" . $user['student_ID'] . "</td>";
             echo "<td>" . $user['phone_num'] . "</td>";
-            echo "<td><img src='http://localhost/website/Student_Teacher/{$user['avatar']}' style='width:100px;height:100px;'</td>";
+            echo "<td><img src='http://localhost/website/Student_Teacher/{$user['avatar']}' style='width:100px;height:100px;>'</td>";
             echo "<td><a href=\"editStudentProfile.php?id={$user['id']}\">Edit</a> </td>";
             if ($_SESSION[$_COOKIE["users"]] == "admin" || $_SESSION[$_COOKIE["users"]] == "teachers") {
                 echo "<a href=\"../Student_Teacher/deleteStudent.php?id={$user['id']}\" onClick=\"return confirm
